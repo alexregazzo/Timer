@@ -94,8 +94,11 @@ function draw() {
                 text(`${parsed_total_left['days'].toString().padStart(3, "0")}:${parsed_total_left['hours'].toString().padStart(2, "0")}:${parsed_total_left['minutes'].toString().padStart(2, "0")}:${parsed_total_left['seconds'].toFixed(2).padStart(5, "0")}`,
                     width / 2, height / 2 + font_size * 3);
             }
-            draw_mobile_arrows(true);
-            if (is_mobile) handle_arrows();
+
+            if (is_mobile) {
+                draw_mobile_arrows(true);
+                handle_arrows();
+            }
         } else {
             // not started
             fill(255);
