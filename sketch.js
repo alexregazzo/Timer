@@ -77,9 +77,11 @@ function draw() {
                 let p_serie = serie_time_left / duration;
                 let p_total = total_time_left / (duration * series);
 
+                //total
                 noStroke();
-                fill(0, 0, 255, 100);
+                fill(100, 100, 200, 100);
                 arc(width / 2, height / 2, clock_size, clock_size, -90, lerp(270, -90, 1 - p_total));
+                //parcial
                 noStroke();
                 fill(255, 0, 0);
                 arc(width / 2, height / 2, clock_size, clock_size, -90, lerp(270, -90, 1 - p_serie));
