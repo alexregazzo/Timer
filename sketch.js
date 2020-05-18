@@ -116,7 +116,11 @@ function draw() {
             text(`Series: ${current_picker === 4 ? '*' : ''}${series}${current_picker === 4 ? '*' : ''}`, width / 2, height / 2 + font_size);
             text(`Duração: ${current_picker === 3 ? '*' : ''}${parsed_duration['days'].toString().padStart(3, "0")}${current_picker === 3 ? '*' : ''}:${current_picker === 2 ? '*' : ''}${parsed_duration['hours'].toString().padStart(2, "0")}${current_picker === 2 ? '*' : ''}:${current_picker === 1 ? '*' : ''}${parsed_duration['minutes'].toString().padStart(2, "0")}${current_picker === 1 ? '*' : ''}:${current_picker === 0 ? '*' : ''}${parsed_duration['seconds'].toString().padStart(2, "0")}${current_picker === 0 ? '*' : ''}`,
                 width / 2, height / 2 + font_size * 2);
-            text("Pressione ESPAÇO para iniciar", width / 2, height / 2 + font_size * 3);
+			if (is_mobile){
+				text("Pressione o AMARELO para iniciar", width / 2, height / 2 + font_size * 3);
+			} else {
+				text("Pressione ESPAÇO para iniciar", width / 2, height / 2 + font_size * 3);
+			}
             if (is_mobile) {
                 draw_mobile_arrows();
             }
